@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <div class="container">    
+      <h1>Weather App</h1>           
+      <%= render 'form' %>      
+  </div>
+</div>
+
+<div class="container">
+  <% if !@resp.blank? %>     
+    <% if @resp[:error] != true %>
+      <div class="card" style="width: 20rem;">
+        <div class="card-body">
+          <h4 class="card-title text-center"><%= @resp[:main] %> <span><img src="http://openweathermap.org/img/w/<%= @resp[:icon] %>.png"></span></h4>    
+          <p class="text-center"><small><%= @resp[:name] %></small></p>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">Min: <span><%= @resp[:temp_min] %></span></li>
+            <li class="list-group-item">Max: <span><%= @resp[:temp_max] %></span></li>
+            <li class="list-group-item">Humidity: <span><%= @resp[:humidity] %></span></li>
+          </ul>
+        </div>  
+      </div>
+    <% else %>
+      <div class="alert alert-danger" role="alert">
+        City Not Found. Please try again.
+      </div>
+    <% end %>  
+  <% end %>
+</div>

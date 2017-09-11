@@ -1,0 +1,11 @@
+<%= form_for :weather, :html => { :class => 'form-inline' }, url: "/" do |f| %>    
+  <div class="form-group">      
+    <%= f.label :country, :class => "sr-only" %>
+    <%= f.select :country, @countries.map{|c| [c.name, c.code] }, {:prompt => "Country"} ,:class => "form-control" %>                    
+  </div>
+  <div class="form-group mx-sm-1">      
+    <%= f.label :city, :class => "sr-only" %>
+    <%= f.text_field :city, :class => 'form-control', :placeholder => "City" %>
+  </div>    
+  <%= f.submit "Find", :class => 'btn btn-primary' %>
+<% end  %>
