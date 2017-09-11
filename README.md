@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* Clone the Project
 
-* Ruby version
+* bundle install 
 
-* System dependencies
+* I added the database.sqlite3 file it has all the countries name and code
 
-* Configuration
+* migrate db and add all the countries data.
 
-* Database creation
+* Alfter all these run rails s
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I will add rspec and seed tomorrow 
